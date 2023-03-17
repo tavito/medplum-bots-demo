@@ -1,0 +1,77 @@
+{
+  "type": "module",
+  "name": "medplum-demo-bots",
+  "version": "1.0.0",
+  "description": "Medplum Demo Bots",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "prettier": "prettier --write .",
+    "lint": "eslint src/"
+  },
+  "author": "Medplum <hello@medplum.com>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@medplum/cli": "2.0.6",
+    "@medplum/core": "2.0.6",
+    "@medplum/fhirtypes": "2.0.6",
+    "@medplum/mock": "2.0.6",
+    "@types/node": "18.7.6",
+    "@types/node-fetch": "^2.6.2",
+    "@types/ssh2-sftp-client": "^7.1.0",
+    "@typescript-eslint/eslint-plugin": "5.44.0",
+    "@typescript-eslint/parser": "5.44.0",
+    "@vitest/ui": "0.22.0",
+    "c8": "7.12.0",
+    "eslint": "8.28.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "form-data": "4.0.0",
+    "node-fetch": "2.6.7",
+    "pdfmake": "0.2.5",
+    "prettier": "2.7.1",
+    "ssh2-sftp-client": "9.0.4",
+    "typescript": "4.7.4",
+    "vitest": "0.22.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": [
+        "error",
+        {
+          "allowExpressions": true
+        }
+      ],
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-floating-promises": "error",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_"
+        }
+      ],
+      "prefer-promise-reject-errors": "error"
+    }
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true
+  }
+}
